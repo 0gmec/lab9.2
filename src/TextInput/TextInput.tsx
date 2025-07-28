@@ -1,18 +1,29 @@
-import {useState} from 'react'
-import { TextInput } from '../types'
+import { useState } from 'react'
+import { TextInputProps } from '../types'
 
-export default function TextInput() {
-    const [text, setText]= useState("Text")
 
-const handleClick= ()=> {
-    setText("Text Sent")
+function TextInput({
+}: TextInputProps) {
+
+    const [text, setText] = useState(" ")
+
+    const onTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const newText = event.target.value
+        setText(newText)
+
+    }
+    return (
+        <div className="TextInput">
+            <p>Text</p>
+            <input type="text"
+                id="myInput"
+                value={text}
+                onChange={onTextChange} />
+            <button onClick={() => setText}>Text</button>
+        </div>
+    )
 
 }
-   return (
-    <div className="TextInput">
-        <p>Text</p>
-        <button onClick={()=> setText}></button>
-    </div>
-   )
 
-}
+
+
