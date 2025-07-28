@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { TextInput } from './types'
+import  TextInput from './types'
+import StatsDisplay from './types'
 import './App.css'
 
 function App() {
