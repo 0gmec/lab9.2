@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { TextInputProps } from '../types'
 
 
-function TextInput({
-}: TextInputProps) {
+export default function TextInput(props: TextInputProps) {
+
 
     const [text, setText] = useState(" ")
 
